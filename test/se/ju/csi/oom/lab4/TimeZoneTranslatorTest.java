@@ -18,8 +18,7 @@ public class TimeZoneTranslatorTest {
 	public void testShiftTimeZone() {
 		DateTime dateTime = new DateTime("2018-01-01 06:00:00");
 		dateTime = TimeZoneTranslator.shiftTimeZone(dateTime, 1, -8);
-		System.out.println(dateTime.toString());
-		assertEquals(dateTime.toString(), "2017-12-31 21:00:00");
+		assertEquals(dateTime.toString(), "2017-12-31 21:00");
 
 	}
 	
@@ -31,8 +30,8 @@ public class TimeZoneTranslatorTest {
 		Event event = new Event("test",startTime, endTime, null, null);
 		event = TimeZoneTranslator.shiftEventTimeZone(event, TimeZone.GREENWICH_UTC, TimeZone.PAKISTAN);
 				
-		assertEquals(event.getStartDate().toString(), "2018-10-02 19:42:00");
-		assertEquals(event.getEndDate().toString(), "2018-10-02 20:42:00");
+		assertEquals(event.getStartDate().toString(), "2018-10-02 19:42");
+		assertEquals(event.getEndDate().toString(), "2018-10-02 20:42");
 	}
 
 }
