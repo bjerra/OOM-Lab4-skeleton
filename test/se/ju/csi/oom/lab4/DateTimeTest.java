@@ -9,7 +9,7 @@ public class DateTimeTest {
 	@Test
 	public void testToString() {
 		DateTime dateTime = new DateTime(2018,01,01,06,00,00);	
-		assertEquals(dateTime.toString(), "2018-01-01 06:00:00");
+		assertEquals(dateTime.toString(), "2018-01-01 06:00");
 	}
 
 	@Test
